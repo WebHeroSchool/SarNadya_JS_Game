@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, serif;
+  font-weight: 700;
+  color: #fff;
+  width: auto;
+  min-width: 545px;
+  max-width: 1440px;
+  height: 1024px;
+  background: url(images/Background.png) 100%;
+  background-size: cover;
+}
+
+img { max-width: 100%; }
+
+button:hover {
+  cursor: pointer;
+  border:#fff 2px solid;
+}
+
+.title {
+  margin-top: 130px;
+  margin-left: 5.9%;
+  margin-bottom: 50px;
+}
+
+.title__subtitle {
+  font-size: 57px;
+  margin-bottom: 10px;
+}
+
+.title p {
+  display: inline;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0 0 0 0.15%;
+}
+
+.title__description_1 {
+  word-spacing: 0.7px;
+}
+
+.navigation {
+  margin-left: 8.7%;
+  line-height: 82px;
+}
+
+.navigation__level {
+  font-size: 50px;
+  position: relative;
+}
+
+.navigation__level input {
+  display: none;
+}
+
+.navigation__radio:checked+label::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -45px;
+  bottom: 2px;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  background-color: #D62B2E;
+  transform: rotate(45deg);
+}
+
+.navigation__level label:hover {
+  cursor: pointer;
+}
+
+.navigation__btn {
+  font-size: 32px;
+  color: #fff;
+  background-color: #d62b2e;
+  width: 352px;
+  height: 95px;
+  border-radius: 7px;
+  margin-top: 103px;
+  margin-left: -3.1%
+}
+
+.card1,
+.card2 {
+  width: 218px;
+  height: 341px;
+  position: absolute;
+}
+
+.card1 {
+  top: 547px;
+  left: 1069px;
+  transform: rotate(39deg);
+}
+
+.card2 {
+  z-index: -1;
+  top: 530px;
+  left: 889px;
+  transform: rotate(12deg);
+}
+
+.off {
+  display: none;
+}
+
+.gameTable {
+  display: flex;
+  height: 71%;
+  margin: 156px 20% 0 20%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameTable_10 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.card {
+  margin: 0 12px 28px 12px;
+  transition-duration: 0.3s;
+  perspective: 1000px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:not(.game-over, .bug):hover {
+  cursor: pointer;
+  animation-name: moveCards;
+  animation-duration: 0.5s;
+  -webkit-transform: translate(0, -23px);
+  -ms-transform: translate(0, -23px);
+  transform: translate(0, -23px);
+}
+
+.inner {
+  background: url(images/card.png);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 218px;
+  height: 341px;
+}
+
+
+.bug {
+  background: url(images/bug.png);
+  border-radius: 10px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.game-over {
+  background: url(images/game-over.png);
+  border-radius: 10px;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+@keyframes moveCards {
+  from {
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: translate(0, -23px);
+    -ms-transform: translate(0, -23px);
+    transform: translate(0, -23px);
+  }
+}
+
