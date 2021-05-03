@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./normalize.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="title">
+    <h1 class="title__subtitle"> Выберите уровень сложности:
+    </h1>
+    <p class="title__description_1"> Выберите сложность и игра начнется.
+    </p>
+    <p class="title__description_2"> Чем выше уровень - тем больше будет выборка карт.
+    </p>
+  </header>
+
+  <section class="navigation">
+    <div class="navigation__level">
+      <input type="radio" class="navigation__radio" id="level1" name="level" value="простой" checked>
+      <label for="level1"> Простой </label>
+    </div>
+
+    <div class="navigation__level">
+      <input type="radio" class="navigation__radio" id="level2" name="level" value="средний">
+      <label for="level2"> Средний </label>
+    </div>
+
+    <div class="navigation__level">
+      <input type="radio" class="navigation__radio" id="level3" name="level" value="сложный">
+      <label for="level3"> Сложный </label>
+    </div>
+    <button class="navigation__btn"> Начать игру </button>
+  </section>
+
+<div class="cards">
+  <div class="card1">
+    <img src="images/card.png" alt="card">
+  </div>
+  <div class="card2">
+    <img src="images/card.png" alt="card">
+  </div>
+</div>
+
+  <script src="script.js"> </script>
+</body>
+
+</html>
